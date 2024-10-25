@@ -1,7 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using TechStore.Data;
+using TechStore.Repository;
+using TechStore.Repository.IRepository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+
+// Repositories
+builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
 
 var app = builder.Build();
 
