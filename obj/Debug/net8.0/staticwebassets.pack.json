@@ -245,6 +245,18 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Jun Anthony\\source\\repos\\TechStore\\TechStore\\wwwroot\\photos\\20241026124624933.jpg",
+      "PackagePath": "staticwebassets\\photos\\20241026124624933.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Jun Anthony\\source\\repos\\TechStore\\TechStore\\wwwroot\\photos\\20241026125646333.jpg",
+      "PackagePath": "staticwebassets\\photos\\20241026125646333.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Jun Anthony\\source\\repos\\TechStore\\TechStore\\wwwroot\\photos\\20241026125836401.jpg",
+      "PackagePath": "staticwebassets\\photos\\20241026125836401.jpg"
+    },
+    {
       "Id": "C:\\Users\\Jun Anthony\\source\\repos\\TechStore\\TechStore\\wwwroot\\photos\\ASUS ROG Rapture GT-BE98.jpg",
       "PackagePath": "staticwebassets\\photos\\ASUS ROG Rapture GT-BE98.jpg"
     },

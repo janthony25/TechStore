@@ -11,11 +11,18 @@
     </div>
 }
 
+@if(TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
 <h2 class="text-center mb-5">@ViewData["Title"]</h2>
 
 <div class="row">
     <div class="col">
-       <a class="btn btn-primary" asp-controller="Products" asp-action="Create">Add Product</a>
+        <a class="btn btn-primary" asp-controller="Products" asp-action="Create">Add Product</a>
     </div>
     <div class="col">
     </div>
