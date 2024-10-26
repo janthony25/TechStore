@@ -58,5 +58,39 @@ namespace TechStore.Controllers
             await _productsRepository.AddProductAsync(productDto);
             return RedirectToAction("GetAllProducts", "Products");
         }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            try
+            {
+                var product = await _productsRepository.GetProductByIdAsync(id);
+
+                return View(product);
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, UpdateProductDto productDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(productDto);
+                }
+
+                await _productsRepository.UpdateProductAsync(id, productDto);
+                return RedirectToAction("GetAllProducts", "Products");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

@@ -14,6 +14,7 @@ builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(conne
 
 // Repositories
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
+builder.Services.AddLogging();
 
 var app = builder.Build();
 

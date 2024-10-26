@@ -7,5 +7,7 @@ namespace TechStore.Repository.IRepository
     {
         Task<List<Product>> GetAllProductsAsync();
         Task AddProductAsync(AddProductDto productDto);
+        Task<UpdateProductDto> GetProductByIdAsync(int id);
+        Task UpdateProductAsync(int id, UpdateProductDto productDto);
     }
 }
